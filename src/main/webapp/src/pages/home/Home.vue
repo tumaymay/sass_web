@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import HomeMain from './components/main'
+import HomeMain from './components/Main'
 import HomeLogo from './components/Logo'
 import HomeHeader from './components/Header'
 export default {
