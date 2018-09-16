@@ -1,7 +1,7 @@
 <template>
     <div class="logo-container">
         <div class="logo">
-            <img src="../../../assets/banner.png" alt="" class="banner">
+            <img src="../assets/banner.png" alt="" class="banner">
             <!--<div class="title">
                 <h1 class="inner-title">
                 大学生组织交流网

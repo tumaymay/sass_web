@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 //import ElementUI from 'element-ui'
 import $ from 'jquery'
+import axios from "axios";
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap//dist/js/bootstrap.min.js'
@@ -14,6 +15,7 @@ import 'bootstrap//dist/js/bootstrap.min.js'
 
 Vue.config.productionTip = false
 //Vue.use(ElementUI)  //全局安装
+Vue.prototype.$axios = axios;
 Vue.use($)
 /*  eslint-disable no-new */
 new Vue({

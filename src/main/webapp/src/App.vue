@@ -1,18 +1,29 @@
 <template>
   <div id="app">
-    <router-view/>
+        <home-logo></home-logo>
+        <home-header></home-header>
+      <keep-alive>
+        <router-view/>
+    </keep-alive>
   </div>
 </template>
 
 <script>
+import HomeLogo from './common/Logo'
+import HomeHeader from './common/Header'
 export default {
-  name: 'App'
+    name: 'App',
+    components:{
+      HomeLogo,
+      HomeHeader,
+    },
+    
 }
 </script>
 
 <style>
 body{
   background-color: #f6f6f6;
-  font-family: “Arial”,”Microsoft YaHei”,”黑体”,”宋体”,sans-serif;
+  font-family: 微软雅黑, 黑体, Calibri, Calibri, Verdana;
 }
 </style>
