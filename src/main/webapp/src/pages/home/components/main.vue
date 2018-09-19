@@ -307,7 +307,6 @@ export default {
                .list-group-item-dep,.list-group-item-renew{
                    border: none;
                }
-
             .media-object{
                 width: 110px;
                 height: 84px;

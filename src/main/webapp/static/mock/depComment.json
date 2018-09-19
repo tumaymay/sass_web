@@ -1,0 +1,33 @@
+{
+    "ret": true,
+    "data":{
+        "depCommentList": [{
+            "id":1,
+            "name": "有毒的黄同学", 
+            "time": "2016-08-17",
+            "content": "好,讲得非常好，good",
+            "reply": [ 
+            {
+                "id": 11,
+                "responder": "傲娇的", 
+                "reviewers": "有毒的黄同学", 
+                "time": "2016-09-05",
+                "content": "你说得对"
+            }]
+        },
+        {
+            "id": 2,
+            "name": "沧海一笑",
+            "time": "2016-07-15",
+            "content": "非常认同",
+            "reply": [{
+                "id": 22,
+                "responder": "山清水秀",
+                "reviewers": "沧海一笑",
+                "time": "2016-07-15",
+                "content": "嗯嗯"
+            }]
+        }]
+    }
+    
+}

@@ -22,21 +22,25 @@ export default new Router({
     {
       path: '/message',
       name: 'Message',
+      redirect: './message/dep',
       component: Message,
       children:[{
           path: '/message/dep',
           name: 'MessageDep',
           component: MessageDep,
+
       },
       {
         path: '/message/act',
         name: 'MessageAct',
         component: MessageAct,
+
       },
       {
         path: '/message/club',
         name: 'MessageClub',
         component: MessageClub,
+
       },
       {
         path: '/message/renew',

@@ -16,9 +16,9 @@
 
             <!--主体部分-->
             <div class="content">
-                <keep-alive>
-                    <router-view/>
-                </keep-alive>    
+               
+                    <router-view></router-view>
+                
             </div>
         </div>    
     </main>  
@@ -44,16 +44,16 @@ export default {
         width:1000px;   
     }
     #nav,.content{
-        background: #fff;
-        box-shadow: 0 1px 3px rgba(26,26,26,.1);
         float: left;
     }
     #nav{
         width: 200px;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(26,26,26,.1);
     }
     .content{
         width: 790px;
-        padding:16px;
+        padding:0 16px 16px 16px ;
         margin-left: 10px;
     }
     /*清除浮动*/

@@ -4,7 +4,7 @@
         <home-header></home-header>
       <keep-alive>
         <router-view/>
-    </keep-alive>
+      </keep-alive>
   </div>
 </template>
 
@@ -25,5 +25,6 @@ export default {
 body{
   background-color: #f6f6f6;
   font-family: 微软雅黑, 黑体, Calibri, Calibri, Verdana;
+  color:#1a1a1a;
 }
 </style>
