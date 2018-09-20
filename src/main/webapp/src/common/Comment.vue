@@ -22,11 +22,16 @@
                             <span class="glyphicon glyphicon-heart"></span>
                             赞
                         </div>
-                        <div class="dep-reply">
+                        <div class="dep-reply" @click="handleReply(item.id)">
                             <span class="glyphicon glyphicon-share-alt"></span>
                             回复
                         </div>
                     </div>
+                    <!--回复评论1-->
+                     <div id="reply-1" >
+                        <comment-box></comment-box>
+                    </div>
+                       
                     
                 </div>
                 
@@ -43,45 +48,45 @@
                         <div class="comment-content">
                             {{reply.content}}
                         </div>
-                        <div class="comment-tool" v-show="!showReply">
+                        <div class="comment-tool">
                             <div class="dep-zan">
                                 <span class="glyphicon glyphicon-heart"></span>
                                 赞
                             </div>
-                            <div class="dep-reply" @click="showReply=!showReply">
+                            <div class="dep-reply" @click="handleReply(reply.id)">
                                 <span class="glyphicon glyphicon-share-alt"></span>
                                 回复
                             </div>
                         </div>
-                        <!--回复评论-->
-                        <div class="my-comment" v-show="showReply">
-                            <input type="text" class="comment-input form-control" placeholder="发表你的评论" v-model="commentText"/>
-                            <button class="btn btn-primary comment-submit"  >评论</button>
+
+                        <!--回复评论2-->
+                        <div id="reply-2">
+                            <comment-box></comment-box>
                         </div>
+                        
+
                     </div>    
                 </div>
             </li>
         </ul>
-        <div class="my-comment">
-            <textarea name="comment-input" id="comment-input" class="comment-input"></textarea>
-            <div class="submit-cancel">
-                <button class="btn btn-default comment-submit"  >取消</button>
-                <button class="btn btn-primary comment-submit"  @click="seecontent()">评论</button>
-                
-            </div>
-            
-        </div>
+
+        <!--评论区-->
+        <comment-box></comment-box>
     </div>  
     
 </template>
 
 <script>
+import CommentBox from './CommentBox'
 export default {
     name:"Comment",
+    components:{
+        CommentBox,
+    },
     data(){
         return{
-            showReply:false,
-            commentText:"",
+            
+            
         }
     },
     props:{
@@ -89,10 +94,12 @@ export default {
         Comments:[]
     },
     methods:{
-        seecontent(){
-            var content = document.getElementById("comment-input")
-            console.log(content.text)
+        handleReply(index){
+            var reply1 = document.getElementById("reply-1")
+            reply1.style.display="block";
+            console.log(index)
         }
+        
     }
     
 }
@@ -101,7 +108,7 @@ export default {
 
 <style scoped>
 .comment{
-    font-size: 16px;
+    font-size: 15px;
 }
 .comment-title{
     background: #eee;
@@ -143,17 +150,9 @@ export default {
             height: 24px;
 
         }
-        .comment-input{
-            box-sizing: content-box;
-            display: inline-block;
-            width:100%;
-            line-height: 35px;
-            height: 35px;
-            padding: 1px 5px;
-            margin-right: 16px;
-
-            /*隐藏多行文本框的滚动条*/
-            overflow: hidden;
+        #reply-1,#reply-2{
+            display: none;
         }
+       
 
 </style>

@@ -21,11 +21,8 @@ export default {
 
         }
     },
-    activated(){
+    mounted(){
       window.addEventListener('scroll',this.handleScroll)
-    },
-    deactivated(){
-      window.removeEventListener('scroll',this.handleScroll) //解绑
     },
     methods:{
       handleScroll(){
@@ -35,10 +32,10 @@ export default {
         const headHeight = header.offsetHeight    //获取导航的高度
         var mainer= document.getElementById('main')  //获取主题元素
         //console.log(topHeight)
-        console.log(Top)
+        //console.log(Top)
         //console.log(headHeight)
         if(Top>150){
-            console.log(mainer)
+            //console.log(mainer)
             header.style.position = 'fixed'
             header.style.top = '0'
             header.style.zIndex = '9999'

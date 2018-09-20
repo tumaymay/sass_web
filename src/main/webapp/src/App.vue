@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    
         <home-logo></home-logo>
         <home-header></home-header>
       <keep-alive>
